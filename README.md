@@ -1,4 +1,4 @@
-#Sample runs
+# Sample runs
 
 On a MBP 13" Retina (early 2015), with 3.1GHz Core i7 and 16GB DDR3 RAM.
 

@@ -26,9 +26,10 @@ const cachedInvAssign = invAssign()
 // const cachedInvSpread = invSpread()
 const cachedProxy = proxy()
 
-console.log('-------------------------------------------------------')
-console.log('Comparing {}, to new Object(), to new Proxy({}) in node')
-console.log('-------------------------------------------------------')
+console.log('============================================================')
+console.log('Comparing getting prop from {}, new Object(), Object.assign,')
+console.log('Object.assign inverted, new Proxy({}) in node')
+console.log('------------------------------------------------------------')
 
 suite
     .add('{ }.get\t\t\t', () => {
@@ -79,8 +80,8 @@ suite
     .on('complete', function () {
         const faster = this.filter('fastest')[0]
         const slower = this.filter('slowest')[0]
-        console.log('--------------------------------------------------')
+        console.log('-------------------------------------------------------')
         console.log(`${faster.name} by ${Math.round(faster.hz / slower.hz)}x`)
+        console.log('=======================================================')
     })
-    // run async
-    .run({ 'async': true })
+    .run({ async: true })
